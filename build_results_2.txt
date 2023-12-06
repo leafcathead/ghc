@@ -1,0 +1,25 @@
+
+Unexpected results from:
+TEST="T16992"
+
+[1m[31mSUMMARY[0m for test run started at Wed Dec  6 12:34:46 2023 
+1:25:06.383664 spent to go through
+    9049 total tests, which gave rise to
+   45160 test cases, of which
+   32118 were skipped
+       0 had missing libraries
+
+    9079 expected passes
+     103 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       2 unexpected failures
+       0 unexpected stat failures
+      19 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-tgdv7tpx/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (compacting_gc)
+   /tmp/ghctest-tgdv7tpx/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (normal)
+
