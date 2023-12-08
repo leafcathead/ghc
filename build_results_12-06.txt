@@ -1,0 +1,224 @@
+
+
+local	T3924	normal	runtime/bytes allocated	50352
+local	T10858	normal	compile_time/bytes allocated	129131096
+local	T1969	normal	compile_time/peak_megabytes_allocated	50
+local	T1969	normal	compile_time/max_bytes_used	19053112
+local	T1969	normal	compile_time/bytes allocated	741292768
+local	T3294	normal	compile_time/peak_megabytes_allocated	88
+local	T3294	normal	compile_time/max_bytes_used	32926016
+local	T3294	normal	compile_time/bytes allocated	1604121920
+local	T4801	normal	compile_time/bytes allocated	298882736
+local	T3064	normal	compile_time/peak_megabytes_allocated	41
+local	T3064	normal	compile_time/max_bytes_used	19015704
+local	T3064	normal	compile_time/bytes allocated	200596448
+local	T5030	normal	compile_time/bytes allocated	348631184
+local	T5631	normal	compile_time/bytes allocated	533196488
+local	parsing001	normal	compile_time/bytes allocated	456567224
+local	T783	normal	compile_time/bytes allocated	375686272
+local	T5321Fun	normal	compile_time/bytes allocated	271929304
+local	T5321FD	normal	compile_time/bytes allocated	243775640
+local	T5642	normal	compile_time/bytes allocated	461919272
+local	T5837	normal	compile_time/bytes allocated	35042944
+local	T6048	optasm	compile_time/bytes allocated	99286360
+local	T9020	optasm	compile_time/bytes allocated	235939048
+local	T9675	optasm	compile_time/peak_megabytes_allocated	42
+local	T9675	optasm	compile_time/max_bytes_used	16431512
+local	T9675	optasm	compile_time/bytes allocated	435913344
+local	T9872d	normal	compile_time/bytes allocated	397874544
+local	T8095	normal	compile_time/bytes allocated	3154554896
+local	T13386	normal	compile_time/bytes allocated	866520680
+local	T15703	normal	compile_time/bytes allocated	514996592
+local	CoOpt_Read	normal	compile_time/bytes allocated	767521656
+local	CoOpt_Singletons	normal	compile_time/bytes allocated	934486536
+local	LargeRecord	normal	compile_time/bytes allocated	6004896456
+local	T9961	normal	compile_time/bytes allocated	348635704
+local	T9233	normal	compile_time/bytes allocated	715124000
+local	T10370	optasm	compile_time/peak_megabytes_allocated	60
+local	T10370	optasm	compile_time/max_bytes_used	23531808
+local	T10547	normal	compile_time/bytes allocated	27679744
+local	T12227	normal	compile_time/bytes allocated	475827928
+local	T12425	optasm	compile_time/bytes allocated	87640480
+local	T12234	optasm	compile_time/bytes allocated	55470776
+local	T12545	normal	compile_time/bytes allocated	1666588520
+local	T13035	normal	compile_time/bytes allocated	99238392
+local	T13056	optasm	compile_time/bytes allocated	342709152
+local	T12707	normal	compile_time/bytes allocated	924209232
+local	T12150	optasm	compile_time/bytes allocated	78143832
+local	T13379	normal	compile_time/bytes allocated	337987760
+local	MultiLayerModules	normal	compile_time/bytes allocated	3087962536
+local	MultiLayerModulesRecomp	normal	compile_time/bytes allocated	848277016
+local	MultiLayerModulesTH_Make	normal	compile_time/bytes allocated	613357808
+local	MultiLayerModulesTH_OneShot	normal	compile_time/bytes allocated	2519336648
+local	MultiLayerModulesDefsGhci	ghci	compile_time/peak_megabytes_allocated	185
+local	MultiLayerModulesDefsGhci	ghci	compile_time/max_bytes_used	77831344
+local	InstanceMatching	normal	compile_time/bytes allocated	5057605976
+local	InstanceMatching1	normal	compile_time/bytes allocated	27489634280
+local	MultiLayerModulesNoCode	ghci	compile_time/peak_megabytes_allocated	118
+local	MultiLayerModulesNoCode	ghci	compile_time/max_bytes_used	44641224
+local	MultiComponentModulesRecomp	normal	compile_time/bytes allocated	624002320
+local	MultiComponentModules	normal	compile_time/bytes allocated	1634803440
+local	ManyConstructors	normal	compile_time/bytes allocated	3905586152
+local	ManyAlternatives	normal	compile_time/bytes allocated	716196584
+local	T13701	normal	compile_time/bytes allocated	2408963744
+local	T13719	normal	compile_time/bytes allocated	5103766424
+local	T14697	normal	compile_time/bytes allocated	349459272
+local	T14683	normal	compile_time/bytes allocated	2844964128
+local	T9630	normal	compile_time/peak_megabytes_allocated	110
+local	T9630	normal	compile_time/max_bytes_used	43458952
+local	T9630	normal	compile_time/bytes allocated	1464798456
+local	T15164	normal	compile_time/bytes allocated	1185698216
+local	T15630	normal	compile_time/peak_megabytes_allocated	25
+local	T15630	normal	compile_time/bytes allocated	158526496
+local	T15630	normal	compile_time/max_bytes_used	8948488
+local	WWRec	normal	compile_time/bytes allocated	576821968
+local	T16190	normal	compile_time/bytes allocated	271482264
+local	T16473	normal	runtime/bytes allocated	51872
+local	T17516	normal	compile_time/bytes allocated	1752041216
+local	T18304	normal	compile_time/bytes allocated	75236088
+local	T18282	normal	compile_time/bytes allocated	146927504
+local	T18140	normal	compile_time/bytes allocated	75125776
+local	T10421	normal	compile_time/bytes allocated	111122024
+local	T10421a	normal	compile_time/bytes allocated	77485656
+local	T13253	normal	compile_time/bytes allocated	339162616
+local	T13253-spj	normal	compile_time/bytes allocated	121699968
+local	T18223	normal	compile_time/bytes allocated	1149705568
+local	T18923	normal	compile_time/bytes allocated	66032248
+local	T16577	normal	compile_time/bytes allocated	7860460216
+local	T9198	normal	compile_time/bytes allocated	44956720
+local	T11545	normal	compile_time/peak_megabytes_allocated	28
+local	T11545	normal	compile_time/bytes allocated	84146968
+local	T11545	normal	compile_time/max_bytes_used	10835424
+local	T15304	normal	compile_time/peak_megabytes_allocated	76
+local	T15304	normal	compile_time/bytes allocated	1269951240
+local	T15304	normal	compile_time/max_bytes_used	29889112
+local	T20049	normal	compile_time/bytes allocated	89112336
+local	T19695	normal	compile_time/bytes allocated	1437441712
+local	hard_hole_fits	normal	compile_time/bytes allocated	452606760
+local	T16875	normal	compile_time/bytes allocated	34057472
+local	T20261	normal	compile_time/peak_megabytes_allocated	92
+local	T20261	normal	compile_time/bytes allocated	592856200
+local	T20261	normal	compile_time/max_bytes_used	37194872
+local	T18698a	normal	compile_time/peak_megabytes_allocated	36
+local	T18698a	normal	compile_time/max_bytes_used	13703256
+local	T18698a	normal	compile_time/bytes allocated	198116344
+local	T18698b	normal	compile_time/peak_megabytes_allocated	37
+local	T18698b	normal	compile_time/max_bytes_used	13792080
+local	T18698b	normal	compile_time/bytes allocated	219140232
+local	haddock.base	normal	runtime/bytes allocated	38709762128
+local	haddock.Cabal	normal	runtime/bytes allocated	22216732168
+local	haddock.compiler	normal	runtime/bytes allocated	173599845776
+local	join002	optasm	runtime/bytes allocated	2000050408
+local	join003	optasm	runtime/bytes allocated	2000050408
+local	join004	optasm	runtime/bytes allocated	16050312
+local	join007	optasm	runtime/bytes allocated	50632
+local	T5835	normal	runtime/peak_megabytes_allocated	2
+local	T5835	normal	runtime/max_bytes_used	289472
+local	T12791	normal	runtime/peak_megabytes_allocated	2
+local	T12791	normal	runtime/max_bytes_used	289472
+local	T10359	normal	runtime/bytes allocated	354160
+local	T14955	normal	runtime/bytes allocated	48050296
+local	T3586	normal	runtime/peak_megabytes_allocated	18
+local	T3586	normal	runtime/max_bytes_used	44328
+local	T3586	normal	runtime/bytes allocated	16101656
+local	T4830	normal	runtime/bytes allocated	97736
+local	lazy-bs-alloc	normal	runtime/bytes allocated	430424
+local	lazy-bs-alloc	normal	runtime/peak_megabytes_allocated	2
+local	lazy-bs-alloc	normal	runtime/max_bytes_used	44792
+local	T876	normal	runtime/bytes allocated	56648
+local	T3738	normal	runtime/peak_megabytes_allocated	2
+local	T3738	normal	runtime/max_bytes_used	44328
+local	T3738	normal	runtime/bytes allocated	50112
+local	MethSharing	normal	runtime/peak_megabytes_allocated	2
+local	MethSharing	normal	runtime/max_bytes_used	44328
+local	MethSharing	normal	runtime/bytes allocated	480097720
+local	T5113	normal	runtime/bytes allocated	8058144
+local	T4978	normal	runtime/bytes allocated	90123944
+local	T5205	normal	runtime/bytes allocated	53464
+local	T5549	normal	runtime/bytes allocated	5793139688
+local	T4474a	normal	runtime/bytes allocated	4831889608
+local	T4474b	normal	runtime/bytes allocated	4831889608
+local	T4474c	normal	runtime/bytes allocated	4831889608
+local	T5237	normal	runtime/bytes allocated	103848
+local	T5536	normal	runtime/bytes allocated	890732352
+local	T7257	normal	runtime/bytes allocated	1122959600
+local	T7257	normal	runtime/peak_megabytes_allocated	214
+local	T7257	normal	runtime/max_bytes_used	209871192
+local	Conversions	normal	runtime/bytes allocated	107064
+local	T7436	normal	runtime/peak_megabytes_allocated	2
+local	T7436	normal	runtime/max_bytes_used	60152
+local	T7436b	normal	runtime/peak_megabytes_allocated	2
+local	T7436b	normal	runtime/max_bytes_used	44328
+local	T7797	normal	runtime/bytes allocated	480050144
+local	T7954	normal	runtime/bytes allocated	1280050600
+local	T7850	normal	runtime/peak_megabytes_allocated	3
+local	T7850	normal	runtime/max_bytes_used	1108656
+local	T5949	normal	runtime/bytes allocated	200728
+local	T4267	normal	runtime/bytes allocated	40712
+local	T7619	normal	runtime/bytes allocated	40712
+local	InlineArrayAlloc	normal	runtime/bytes allocated	1600040712
+local	InlineByteArrayAlloc	normal	runtime/bytes allocated	1440040712
+local	InlineCloneArrayAlloc	normal	runtime/bytes allocated	1600040872
+local	T9203	normal	runtime/bytes allocated	41982752
+local	T9339	normal	runtime/bytes allocated	50368
+local	T8472	normal	runtime/bytes allocated	50344
+local	T12996	normal	runtime/bytes allocated	78456
+local	T13001	normal	runtime/bytes allocated	50256
+local	T8763	normal	runtime/bytes allocated	40728
+local	T12990	normal	runtime/bytes allocated	20840728
+local	T13218	normal	runtime/bytes allocated	82027592
+local	T13218	normal	runtime/peak_megabytes_allocated	2
+local	T13218	normal	runtime/max_bytes_used	365272
+local	DeriveNull	normal	runtime/bytes allocated	112050408
+local	T13623	normal	runtime/bytes allocated	50440
+local	T14052	ghci	compile_time/bytes allocated	3633981872
+local	T14052Type	ghci	compile_time/bytes allocated	6325862336
+local	T14936	normal	runtime/bytes allocated	50720
+local	T15226	normal	runtime/bytes allocated	40736
+local	T15226a	normal	runtime/bytes allocated	40736
+local	T15263	normal	runtime/bytes allocated	1061504
+local	T15426	normal	runtime/bytes allocated	192040872
+local	T15578	normal	runtime/bytes allocated	400040976
+local	T15185	normal	runtime/bytes allocated	41032
+local	T17123	normal	runtime/bytes allocated	5235800
+local	UniqLoop	normal	runtime/bytes allocated	800040816
+local	T18574	normal	runtime/bytes allocated	50344
+local	T19347	normal	runtime/bytes allocated	100512
+local	space_leak_001	normal	runtime/bytes allocated	9066688024
+local	space_leak_001	normal	runtime/peak_megabytes_allocated	3
+local	space_leak_001	normal	runtime/max_bytes_used	463320
+local	T4334	normal	runtime/peak_megabytes_allocated	2
+local	T4334	normal	runtime/max_bytes_used	60680
+local	T2762	normal	runtime/peak_megabytes_allocated	2
+local	T2762	normal	runtime/max_bytes_used	35984
+local	T4029	ghci	runtime/peak_megabytes_allocated	37
+local	T4029	ghci	runtime/max_bytes_used	14816472
+local	T11276	normal	compile_time/bytes allocated	91076224
+local	T11303b	normal	compile_time/bytes allocated	39367456
+local	T11374	normal	compile_time/bytes allocated	187153976
+local	T11822	normal	compile_time/bytes allocated	103346656
+local	T11195	normal	compile_time/bytes allocated	226861752
+local	T17096	normal	compile_time/bytes allocated	212348504
+local	T17836	normal	compile_time/bytes allocated	843858672
+local	T17836b	normal	compile_time/bytes allocated	44614304
+local	T17977	normal	compile_time/bytes allocated	39324448
+local	T17977b	normal	compile_time/bytes allocated	37116152
+local	T18478	normal	compile_time/bytes allocated	492457928
+local	PmSeriesS	normal	compile_time/bytes allocated	52165824
+local	PmSeriesT	normal	compile_time/bytes allocated	74201048
+local	PmSeriesV	normal	compile_time/bytes allocated	51436344
+local	PmSeriesG	normal	compile_time/bytes allocated	42956000
+local	T10678	normal	runtime/bytes allocated	56041152
+local	T7702	normal	compile_time/peak_megabytes_allocated	22
+local	T13536a	optasm	runtime/bytes allocated	86280
+local	T8766	normal	runtime/bytes allocated	16827664
+local	T9848	normal	runtime/bytes allocated	51296
+local	T13191	normal	runtime/bytes allocated	185942328
+local	T3474	normal	runtime/max_bytes_used	44328
+local	T17499	normal	runtime/bytes allocated	96040696
+local	hie002	normal	compile_time/bytes allocated	9037739080
+local	T9872a	normal	compile_time/bytes allocated	1673157528
+local	T9872b	normal	compile_time/bytes allocated	1919598552
+local	T9872b_defer	normal	compile_time/bytes allocated	2952689280
+local	T9872c	normal	compile_time/bytes allocated	1631863696
+local	TcPlugin_RewritePerf	normal	compile_time/bytes allocated	2111821056

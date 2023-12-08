@@ -2,8 +2,8 @@
 Unexpected results from:
 TEST="T16992"
 
-[1m[31mSUMMARY[0m for test run started at Wed Dec  6 12:34:46 2023 
-1:25:06.383664 spent to go through
+[1m[31mSUMMARY[0m for test run started at Wed Dec  6 15:48:27 2023 
+1:34:14.294324 spent to go through
     9049 total tests, which gave rise to
    45160 test cases, of which
    32118 were skipped
@@ -20,6 +20,6 @@ TEST="T16992"
       19 fragile tests
 
 Unexpected failures:
-   /tmp/ghctest-tgdv7tpx/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (compacting_gc)
-   /tmp/ghctest-tgdv7tpx/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (normal)
+   /tmp/ghctest-ty7rbhzj/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (compacting_gc)
+   /tmp/ghctest-ty7rbhzj/test   spaces/libraries/ghc-compact/tests/T16992.run  T16992 [bad exit code (137)] (normal)
 
