@@ -246,6 +246,23 @@ getCoreToDo logger dflags
         -- so that overloaded functions have all their dictionary lambdas manifest
         runWhen do_specialise CoreDoSpecialising,
 
+            -- ORIGINAL ORDER:
+              -- full_laziness
+              -- do_simpl3
+              -- Float inwards
+
+            -- MODIFIED ORDER:
+              -- Float inwards
+              -- full_laziness
+              -- dosimpl3
+        
+        runWhen do_float_in CoreDoFloatInwards,
+        -- Run float-inwards immediately before the strictness analyser
+        -- Doing so pushes bindings nearer their use site and hence makes
+        -- them more likely to be strict. These bindings might only show
+        -- up after the inlining from simplification.  Example in fulsom,
+        -- Csg.calc, where an arg of timesDouble thereby becomes strict.
+
         if full_laziness then
            CoreDoFloatOutwards FloatOutSwitches {
                                  floatOutLambdas   = Just 0,
@@ -291,12 +308,6 @@ getCoreToDo logger dflags
                 -- ==>  let k = BIG in letrec go = \xs -> ...(BIG x).... in go xs
                 -- Don't stop now!
 
-        runWhen do_float_in CoreDoFloatInwards,
-            -- Run float-inwards immediately before the strictness analyser
-            -- Doing so pushes bindings nearer their use site and hence makes
-            -- them more likely to be strict. These bindings might only show
-            -- up after the inlining from simplification.  Example in fulsom,
-            -- Csg.calc, where an arg of timesDouble thereby becomes strict.
 
         runWhen call_arity $ CoreDoPasses
             [ CoreDoCallArity
@@ -308,6 +319,8 @@ getCoreToDo logger dflags
 
         runWhen exitification CoreDoExitify,
             -- See Note [Placement of the exitification pass]
+
+
 
         runWhen full_laziness $
            CoreDoFloatOutwards FloatOutSwitches {
