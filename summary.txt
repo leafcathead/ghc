@@ -1,0 +1,18 @@
+
+[1m[32mSUMMARY[0m for test run started at Fri Dec  8 17:05:56 2023 
+1:22:51.627084 spent to go through
+    9049 total tests, which gave rise to
+   45160 test cases, of which
+   32118 were skipped
+       0 had missing libraries
+
+    9081 expected passes
+     103 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       0 unexpected failures
+       0 unexpected stat failures
+      19 fragile tests
+

@@ -128,7 +128,9 @@ core2core hsc_env guts@(ModGuts { mg_module  = mod
 
 getCoreToDo :: Logger -> DynFlags -> [CoreToDo]
 getCoreToDo logger dflags
-  = flatten_todos core_todo
+  =  trace "REALLY OBVIOUS PRINTING MESSAGE HERE!!! THERE IS NO WAY YOU COULD MISS THIS! THIS IS GOOD! :)" $ 
+     trace ("DynFlags - Rule Check: " ++ show (ruleCheck dflags) ++ ", Full Laziness: " ++ show (gopt Opt_FullLaziness dflags))  $
+     flatten_todos core_todo
   where
     phases        = simplPhases        dflags
     max_iter      = maxSimplIterations dflags
@@ -487,28 +489,28 @@ doCorePass pass guts = do
 
   case pass of
     CoreDoSimplify {}         -> {-# SCC "Simplify" #-}
-                                 simplifyPgm pass guts
+                                 trace ("CoreDoSimplify") $ simplifyPgm pass guts
 
     CoreCSE                   -> {-# SCC "CommonSubExpr" #-}
-                                 updateBinds cseProgram
+                                  trace ("CoreCoreCSE") $ updateBinds cseProgram
 
     CoreLiberateCase          -> {-# SCC "LiberateCase" #-}
-                                 updateBinds (liberateCase dflags)
+                                  trace ("CoreDoLiberateCase") $ updateBinds (liberateCase dflags)
 
     CoreDoFloatInwards        -> {-# SCC "FloatInwards" #-}
-                                 updateBinds (floatInwards platform)
+                                  trace ("CoreDoFloatInwards") $ updateBinds (floatInwards platform)
 
     CoreDoFloatOutwards f     -> {-# SCC "FloatOutwards" #-}
-                                 updateBindsM (liftIO . floatOutwards logger f us)
+                                  trace ("CoreDoFloatOutwards") $ updateBindsM (liftIO . floatOutwards logger f us)
 
     CoreDoStaticArgs          -> {-# SCC "StaticArgs" #-}
-                                 updateBinds (doStaticArgs us)
+                                  trace ("CoreDoStaticArgs") $ updateBinds (doStaticArgs us)
 
     CoreDoCallArity           -> {-# SCC "CallArity" #-}
-                                 updateBinds callArityAnalProgram
+                                 trace ("CoreDoCallArity") $ updateBinds callArityAnalProgram
 
     CoreDoExitify             -> {-# SCC "Exitify" #-}
-                                 updateBinds exitifyProgram
+                                 trace ("DoExitify") $ updateBinds exitifyProgram
 
     CoreDoDemand              -> {-# SCC "DmdAnal" #-}
                                  updateBindsM (liftIO . dmdAnal logger dflags fam_envs (mg_rules guts))
@@ -526,7 +528,7 @@ doCorePass pass guts = do
                                  specConstrProgram guts
 
     CoreAddCallerCcs          -> {-# SCC "AddCallerCcs" #-}
-                                 addCallerCostCentres guts
+                                 trace ("AddCallerCcs") $ addCallerCostCentres guts
 
     CoreAddLateCcs            -> {-# SCC "AddLateCcs" #-}
                                  addLateCostCentresMG guts

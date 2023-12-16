@@ -1,0 +1,462 @@
+Up to date
+| Run Testsuite GetExtraDeps: none
+# ghc-config (for _build/test/ghcconfig)
+| Run Testsuite RunTest: none => none
+/usr/bin/python3 testsuite/driver/runtests.py --rootdir=testsuite/tests --rootdir=libraries/binary/tests --rootdir=libraries/bytestring/tests --rootdir=libraries/directory/tests --rootdir=libraries/process/tests --rootdir=libraries/exceptions/tests --rootdir=libraries/ghc-heap/tests --rootdir=libraries/hpc/tests --rootdir=libraries/template-haskell/tests --rootdir=libraries/text/tests --rootdir=libraries/array/tests --rootdir=libraries/base/tests --rootdir=libraries/deepseq/tests --rootdir=libraries/exceptions/tests --rootdir=libraries/filepath/tests --rootdir=libraries/ghc-compact/tests --rootdir=libraries/ghc-prim/tests --rootdir=libraries/haskeline/tests --rootdir=libraries/pretty/tests --rootdir=libraries/stm/tests --rootdir=libraries/unix/tests --top /home/pepercr/Documents/ghc/testsuite -e windows=False -e darwin=False -e config.local=False -e config.cleanup=True -e config.accept=False -e config.accept_platform=False -e config.accept_os=False -e 'config.exeext='\'''\''' -e config.compiler_debugged=False -e ghc_with_native_codegen=True -e config.have_ncg=True -e config.have_llvm=False -e config.compiler_profiled=False -e config.have_RTS_linker=True -e 'config.package_conf_cache_file="/home/pepercr/Documents/ghc/_build/stage1/lib/package.conf.d/package.cache"' -e 'config.libdir="/home/pepercr/Documents/ghc/_build/stage1/lib"' -e config.have_interp=True -e config.unregisterised=False -e 'ghc_compiler_always_flags='\'' -dcore-lint -dstg-lint -dcmm-lint -no-user-package-db -rtsopts   -fno-warn-missed-specialisations -fshow-warning-groups -fdiagnostics-color=never -fno-diagnostics-show-caret -Werror=compat -dno-debug-output'\''' -e ghc_with_dynamic_rts=True -e ghc_with_threaded_rts=True -e config.have_fast_bignum=True -e ghc_with_smp=True -e config.ghc_dynamic=True -e config.leading_underscore=False -e 'config.wordsize="64"' -e 'config.os="linux"' -e 'config.arch="x86_64"' -e 'config.platform="x86_64-unknown-linux"' -e config.stage=2 --config gs=gs --config 'timeout_prog="/home/pepercr/Documents/ghc/_build/testsuite/timeout/install-inplace/bin/timeout"' --config stats_files_dir=_build/stage1/haddock-timing-files --threads=1 --config-file=testsuite/config/ghc -e config.speed=2 --summary-file=testsuite_summary.txt --verbose=2 --config 'compiler="/home/pepercr/Documents/ghc/_build/stage1/bin/ghc"' --config 'ghc_pkg="/home/pepercr/Documents/ghc/_build/stage1/bin/ghc-pkg"' --config 'haddock="/home/pepercr/Documents/ghc/_build/stage1/bin/haddock"' --config 'hp2ps="/home/pepercr/Documents/ghc/_build/stage1/bin/hp2ps"' --config 'hpc="/home/pepercr/Documents/ghc/_build/stage1/bin/hpc"' -e config.in_tree_compiler=True
+Failed to find `llc` command; skipping LLVM ways...
+Timeout is 300
+Known ways: prof, normal_h, prof_hc_hb, prof_hb, prof_hd, prof_hy, prof_hr, sanity, threaded1_ls, threaded2_hT, debug_numa, llvm, debugllvm, profllvm, profoptllvm, profthreadedllvm, debug, ghci-ext, ghci-ext-prof, ext-interp, nonmoving, nonmoving_thr, nonmoving_thr_sanity, nonmoving_thr_ghc, compacting_gc
+Run ways: normal, hpc, optasm, ghci, threaded1, threaded2, dyn, profasm, profthreaded
+Compile ways: normal, hpc, optasm, profasm
+Allowing performance changes in: 
+Found 547 .T files...
+Beginning test run at Fri Dec  8 14:05:13 2023 
+Detected CPU features:  {'sep', 'sse3', ':', 'msr', 'pge', 'aes', 'ht', 'mce', 'mca', 'pat', 'cx16', 'hypervisor', 'sse4_1', 'nopl', 'mmx', 'pti', 'clflush', 'cpuid', 'xtopology', 'flags', 'fxsr', 'cpuid_fault', 'sse4_2', 'pse36', 'ssse3', 'popcnt', 'syscall', 'pse', 'x2apic', 'cmov', 'pae', 'tsc', 'sse', 'nx', 'lm', 'fpu', 'sse2', 'mtrr', 'tsc_known_freq', 'lahf_lm', 'constant_tsc', 'de', 'apic', 'cx8'}
+--- "/tmp/ghctest-do9z_ylc/test   spaces/testsuite/tests/ghci/linking/T11531.run/T11531.stderr.normalised"	2023-12-08 14:22:03.653379811 -0500
++++ "/tmp/ghctest-do9z_ylc/test   spaces/testsuite/tests/ghci/linking/T11531.run/T11531.run.stderr.normalised"	2023-12-08 14:22:03.653379811 -0500
+@@ -1,10 +0,0 @@
+-
+-GHC.Linker.Loader.dynLoadObjs: Loading temp shared object failed
+-During interactive linking, GHCi couldn't find the following symbol:
+-This may be due to you not asking GHCi to load extra object files,
+-archives or DLLs needed by your current session.  Restart GHCi, specifying
+-the missing library using the -L/path/to/object/dir and -lmissinglibname
+-flags, or simply by naming the relevant files on the GHCi command line.
+-Alternatively, this link failure might indicate a bug in GHCi.
+-If you suspect the latter, please report this as a GHC bug:
+-  https://www.haskell.org/ghc/reportabug
+--- /dev/null	2023-12-08 13:35:40.192000000 -0500
++++ "/tmp/ghctest-do9z_ylc/test   spaces/testsuite/tests/runghc/T-signals-child.run/T-signals-child.run.stdout.normalised"	2023-12-08 15:04:00.331272017 -0500
+@@ -0,0 +1,3 @@
++Child process: 234881, real process: 234881
++Expected "HUP", received: "No signaHlU Pr"
++Expected ExitFailure 42, received ExitFailure 42
+Found CPU features: sep sse3 : msr pge aes ht mce mca pat cx16 hypervisor sse4_1 nopl mmx pti clflush cpuid xtopology flags fxsr cpuid_fault sse4_2 pse36 ssse3 popcnt syscall pse x2apic cmov pae tsc sse nx lm fpu sse2 mtrr tsc_known_freq lahf_lm constant_tsc de apic cx8
+=====> 100 of 9049 [0, 0, 0]
+=====> 200 of 9049 [0, 0, 0]
+=====> 300 of 9049 [0, 0, 0]
+=====> 400 of 9049 [0, 0, 0]
+*** fragile test cgrun057(profasm) resulted in pass
+=====> 500 of 9049 [0, 0, 0]
+=====> 600 of 9049 [0, 0, 0]
+*** fragile test T5611(normal) resulted in pass
+*** fragile test T5611a(normal) resulted in pass
+=====> 800 of 9049 [0, 0, 0]
+=====> 900 of 9049 [0, 0, 0]
+=====> 1000 of 9049 [0, 0, 0]
+=====> 1100 of 9049 [0, 0, 0]
+=====> 1200 of 9049 [0, 0, 0]
+=====> 1300 of 9049 [0, 0, 0]
+=====> 1400 of 9049 [0, 0, 0]
+=====> 1500 of 9049 [0, 0, 0]
+=====> 1600 of 9049 [0, 0, 0]
+=====> 1700 of 9049 [0, 0, 0]
+=====> 1800 of 9049 [0, 0, 0]
+=====> 1900 of 9049 [0, 0, 0]
+Actual stderr output differs from expected:
+*** fragile test T11531(normal) resulted in fail
+=====> 2000 of 9049 [0, 0, 0]
+=====> 2100 of 9049 [0, 0, 0]
+=====> 2200 of 9049 [0, 0, 0]
+=====> 2300 of 9049 [0, 0, 0]
+*** fragile test T3171(normal) resulted in pass
+=====> 2400 of 9049 [0, 0, 0]
+=====> 2400 of 9049 [0, 0, 0]
+=====> 2500 of 9049 [0, 0, 0]
+=====> 2600 of 9049 [0, 0, 0]
+=====> 2700 of 9049 [0, 0, 0]
+=====> 2800 of 9049 [0, 0, 0]
+=====> 2900 of 9049 [0, 0, 0]
+=====> 3000 of 9049 [0, 0, 0]
+=====> 3100 of 9049 [0, 0, 0]
+=====> 3200 of 9049 [0, 0, 0]
+=====> 3300 of 9049 [0, 0, 0]
+=====> 3400 of 9049 [0, 0, 0]
+=====> 3500 of 9049 [0, 0, 0]
+=====> 3600 of 9049 [0, 0, 0]
+=====> 3700 of 9049 [0, 0, 0]
+=====> 3800 of 9049 [0, 0, 0]
+=====> 3900 of 9049 [0, 0, 0]
+=====> 4000 of 9049 [0, 0, 0]
+=====> 4100 of 9049 [0, 0, 0]
+=====> 4200 of 9049 [0, 0, 0]
+=====> 4300 of 9049 [0, 0, 0]
+=====> 4400 of 9049 [0, 0, 0]
+=====> 4500 of 9049 [0, 0, 0]
+=====> 4600 of 9049 [0, 0, 0]
+=====> 4700 of 9049 [0, 0, 0]
+=====> 4800 of 9049 [0, 0, 0]
+=====> 4900 of 9049 [0, 0, 0]
+=====> 5000 of 9049 [0, 0, 0]
+*** fragile test heapprof001(profasm) resulted in pass
+*** fragile test heapprof001(prof) resulted in pass
+*** fragile test heapprof001(prof_hc_hb) resulted in pass
+*** fragile test heapprof001(prof_hb) resulted in pass
+*** fragile test heapprof001(prof_hd) resulted in pass
+*** fragile test heapprof001(prof_hy) resulted in pass
+*** fragile test heapprof001(prof_hr) resulted in pass
+=====> 5100 of 9049 [0, 0, 0]
+=====> 5100 of 9049 [0, 0, 0]
+*** fragile test T5559(profasm) resulted in pass
+*** fragile test T5559(prof) resulted in pass
+*** fragile test T5559(ghci-ext-prof) resulted in pass
+*** fragile test T15897(profasm) resulted in pass
+*** fragile test T15897(profasm) resulted in pass
+=====> 5200 of 9049 [0, 0, 0]
+=====> 5300 of 9049 [0, 0, 0]
+=====> 5400 of 9049 [0, 0, 0]
+=====> 5500 of 9049 [0, 0, 0]
+=====> 5600 of 9049 [0, 0, 0]
+=====> 5700 of 9049 [0, 0, 0]
+=====> 5800 of 9049 [0, 0, 0]
+Actual stdout output differs from expected:
+*** fragile test T-signals-child(threaded1) resulted in fail
+=====> 6000 of 9049 [0, 0, 0]
+=====> 6100 of 9049 [0, 0, 0]
+=====> 6200 of 9049 [0, 0, 0]
+=====> 6300 of 9049 [0, 0, 0]
+=====> 6400 of 9049 [0, 0, 0]
+=====> 6500 of 9049 [0, 0, 0]
+=====> 6600 of 9049 [0, 0, 0]
+=====> 6700 of 9049 [0, 0, 0]
+=====> 6700 of 9049 [0, 0, 0]
+=====> 6800 of 9049 [0, 0, 0]
+=====> 6800 of 9049 [0, 0, 0]
+=====> 6900 of 9049 [0, 0, 0]
+=====> 6900 of 9049 [0, 0, 0]
+=====> 7000 of 9049 [0, 0, 0]
+=====> 7000 of 9049 [0, 0, 0]
+=====> 7100 of 9049 [0, 0, 0]
+=====> 7200 of 9049 [0, 0, 0]
+=====> 7300 of 9049 [0, 0, 0]
+=====> 7400 of 9049 [0, 0, 0]
+=====> 7500 of 9049 [0, 0, 0]
+=====> 7600 of 9049 [0, 0, 0]
+=====> 7700 of 9049 [0, 0, 0]
+=====> 7800 of 9049 [0, 0, 0]
+=====> 7900 of 9049 [0, 0, 0]
+=====> 8000 of 9049 [0, 0, 0]
+=====> 8100 of 9049 [0, 0, 0]
+=====> 8200 of 9049 [0, 0, 0]
+=====> 8300 of 9049 [0, 0, 0]
+=====> 8400 of 9049 [0, 0, 0]
+=====> 8700 of 9049 [0, 0, 0]
+*** fragile test CPUTime001(normal) resulted in pass
+=====> 8800 of 9049 [0, 0, 0]
+=====> 8900 of 9049 [0, 0, 0]
+=====> 9000 of 9049 [0, 0, 0]
+
+Performance Metrics (test environment: local):
+
+
+Metrics: runtime/bytes allocated
+--------------------------------
+
+                                        Baseline                           
+                         Test    Metric    value       New value Change    
+---------------------------------------------------------------------------
+          Conversions(normal) run/alloc                  107,064        NEW
+           DeriveNull(normal) run/alloc              112,050,408        NEW
+     InlineArrayAlloc(normal) run/alloc            1,600,040,712        NEW
+ InlineByteArrayAlloc(normal) run/alloc            1,440,040,712        NEW
+InlineCloneArrayAlloc(normal) run/alloc            1,600,040,872        NEW
+          MethSharing(normal) run/alloc              480,097,720        NEW
+               T10359(normal) run/alloc                  354,160        NEW
+               T10678(normal) run/alloc               56,041,152        NEW
+               T12990(normal) run/alloc               20,840,728        NEW
+               T12996(normal) run/alloc                   78,456        NEW
+               T13001(normal) run/alloc                   50,256        NEW
+               T13191(normal) run/alloc              185,942,328        NEW
+               T13218(normal) run/alloc               82,027,592        NEW
+              T13536a(optasm) run/alloc                   86,280        NEW
+               T13623(normal) run/alloc                   50,440        NEW
+               T14936(normal) run/alloc                   50,720        NEW
+               T14955(normal) run/alloc               48,050,296        NEW
+               T15185(normal) run/alloc                   41,032        NEW
+               T15226(normal) run/alloc                   40,736        NEW
+              T15226a(normal) run/alloc                   40,736        NEW
+               T15263(normal) run/alloc                1,061,504        NEW
+               T15426(normal) run/alloc              192,040,872        NEW
+               T15578(normal) run/alloc              400,040,976        NEW
+               T16473(normal) run/alloc                   51,872        NEW
+               T17123(normal) run/alloc                5,235,800        NEW
+               T17499(normal) run/alloc               96,040,696        NEW
+               T18574(normal) run/alloc                   50,344        NEW
+               T19347(normal) run/alloc                  100,512        NEW
+                T3586(normal) run/alloc               16,101,656        NEW
+                T3738(normal) run/alloc                   50,112        NEW
+                T3924(normal) run/alloc                   50,352        NEW
+                T4267(normal) run/alloc                   40,712        NEW
+               T4474a(normal) run/alloc            4,831,889,608        NEW
+               T4474b(normal) run/alloc            4,831,889,608        NEW
+               T4474c(normal) run/alloc            4,831,889,608        NEW
+                T4830(normal) run/alloc                   97,736        NEW
+                T4978(normal) run/alloc               90,123,944        NEW
+                T5113(normal) run/alloc                8,058,144        NEW
+                T5205(normal) run/alloc                   53,464        NEW
+                T5237(normal) run/alloc                  103,848        NEW
+                T5536(normal) run/alloc              890,732,352        NEW
+                T5549(normal) run/alloc            5,793,139,688        NEW
+                T5949(normal) run/alloc                  200,728        NEW
+                T7257(normal) run/alloc            1,122,959,600        NEW
+                T7619(normal) run/alloc                   40,712        NEW
+                T7797(normal) run/alloc              480,050,144        NEW
+                T7954(normal) run/alloc            1,280,050,600        NEW
+                T8472(normal) run/alloc                   50,344        NEW
+                 T876(normal) run/alloc                   56,648        NEW
+                T8763(normal) run/alloc                   40,728        NEW
+                T8766(normal) run/alloc               16,827,664        NEW
+                T9203(normal) run/alloc               41,982,752        NEW
+                T9339(normal) run/alloc                   50,368        NEW
+                T9848(normal) run/alloc                   51,296        NEW
+             UniqLoop(normal) run/alloc              800,040,816        NEW
+        haddock.Cabal(normal) run/alloc           22,216,711,512        NEW
+         haddock.base(normal) run/alloc           38,709,735,376        NEW
+     haddock.compiler(normal) run/alloc          173,599,797,944        NEW
+              join002(optasm) run/alloc            2,000,050,408        NEW
+              join003(optasm) run/alloc            2,000,050,408        NEW
+              join004(optasm) run/alloc               16,050,312        NEW
+              join007(optasm) run/alloc                   50,632        NEW
+        lazy-bs-alloc(normal) run/alloc                  430,424        NEW
+       space_leak_001(normal) run/alloc            9,066,688,024        NEW
+                                                                           
+                    geo. mean                                     +0.0%    
+
+
+Metrics: compile_time/bytes allocated
+-------------------------------------
+
+                                              Baseline                          
+                               Test    Metric    value      New value Change    
+--------------------------------------------------------------------------------
+                 CoOpt_Read(normal) ghc/alloc             767,522,400        NEW
+           CoOpt_Singletons(normal) ghc/alloc             934,485,888        NEW
+           InstanceMatching(normal) ghc/alloc           5,057,605,976        NEW
+          InstanceMatching1(normal) ghc/alloc          27,489,634,280        NEW
+                LargeRecord(normal) ghc/alloc           6,004,895,440        NEW
+           ManyAlternatives(normal) ghc/alloc             716,198,240        NEW
+           ManyConstructors(normal) ghc/alloc           3,905,589,232        NEW
+      MultiComponentModules(normal) ghc/alloc           1,634,804,872        NEW
+MultiComponentModulesRecomp(normal) ghc/alloc             624,000,192        NEW
+          MultiLayerModules(normal) ghc/alloc           3,087,776,544        NEW
+    MultiLayerModulesRecomp(normal) ghc/alloc             848,272,040        NEW
+   MultiLayerModulesTH_Make(normal) ghc/alloc             613,320,736        NEW
+MultiLayerModulesTH_OneShot(normal) ghc/alloc           2,519,314,888        NEW
+                  PmSeriesG(normal) ghc/alloc              42,956,368        NEW
+                  PmSeriesS(normal) ghc/alloc              52,164,160        NEW
+                  PmSeriesT(normal) ghc/alloc              74,201,368        NEW
+                  PmSeriesV(normal) ghc/alloc              51,435,672        NEW
+                     T10421(normal) ghc/alloc             111,119,064        NEW
+                    T10421a(normal) ghc/alloc              77,484,656        NEW
+                     T10547(normal) ghc/alloc              27,679,744        NEW
+                     T10858(normal) ghc/alloc             129,130,992        NEW
+                     T11195(normal) ghc/alloc             226,859,704        NEW
+                     T11276(normal) ghc/alloc              91,075,584        NEW
+                    T11303b(normal) ghc/alloc              39,369,304        NEW
+                     T11374(normal) ghc/alloc             187,152,328        NEW
+                     T11545(normal) ghc/alloc              84,147,288        NEW
+                     T11822(normal) ghc/alloc             103,342,624        NEW
+                     T12150(optasm) ghc/alloc              78,143,184        NEW
+                     T12227(normal) ghc/alloc             475,827,424        NEW
+                     T12234(optasm) ghc/alloc              55,471,656        NEW
+                     T12425(optasm) ghc/alloc              87,638,232        NEW
+                     T12545(normal) ghc/alloc           1,666,587,080        NEW
+                     T12707(normal) ghc/alloc             924,206,088        NEW
+                     T13035(normal) ghc/alloc              99,239,232        NEW
+                     T13056(optasm) ghc/alloc             342,709,600        NEW
+                     T13253(normal) ghc/alloc             339,156,888        NEW
+                 T13253-spj(normal) ghc/alloc             121,702,816        NEW
+                     T13379(normal) ghc/alloc             337,986,096        NEW
+                     T13386(normal) ghc/alloc             866,520,032        NEW
+                     T13701(normal) ghc/alloc           2,408,676,632        NEW
+                     T13719(normal) ghc/alloc           5,103,676,904        NEW
+                       T14052(ghci) ghc/alloc           3,633,983,792        NEW
+                   T14052Type(ghci) ghc/alloc           6,325,862,032        NEW
+                     T14683(normal) ghc/alloc           2,844,963,464        NEW
+                     T14697(normal) ghc/alloc             349,430,328        NEW
+                     T15164(normal) ghc/alloc           1,185,696,072        NEW
+                     T15304(normal) ghc/alloc           1,269,948,128        NEW
+                     T15630(normal) ghc/alloc             158,524,328        NEW
+                     T15703(normal) ghc/alloc             514,996,528        NEW
+                     T16190(normal) ghc/alloc             271,491,728        NEW
+                     T16577(normal) ghc/alloc           7,860,465,368        NEW
+                     T16875(normal) ghc/alloc              34,055,824        NEW
+                     T17096(normal) ghc/alloc             212,351,320        NEW
+                     T17516(normal) ghc/alloc           1,752,041,232        NEW
+                     T17836(normal) ghc/alloc             843,858,040        NEW
+                    T17836b(normal) ghc/alloc              44,614,640        NEW
+                     T17977(normal) ghc/alloc              39,321,216        NEW
+                    T17977b(normal) ghc/alloc              37,117,968        NEW
+                     T18140(normal) ghc/alloc              75,126,144        NEW
+                     T18223(normal) ghc/alloc           1,149,704,896        NEW
+                     T18282(normal) ghc/alloc             146,926,960        NEW
+                     T18304(normal) ghc/alloc              75,237,080        NEW
+                     T18478(normal) ghc/alloc             492,458,264        NEW
+                    T18698a(normal) ghc/alloc             198,115,368        NEW
+                    T18698b(normal) ghc/alloc             219,138,256        NEW
+                     T18923(normal) ghc/alloc              66,032,640        NEW
+                      T1969(normal) ghc/alloc             741,294,736        NEW
+                     T19695(normal) ghc/alloc           1,437,439,448        NEW
+                     T20049(normal) ghc/alloc              89,113,712        NEW
+                     T20261(normal) ghc/alloc             592,630,344        NEW
+                      T3064(normal) ghc/alloc             200,594,792        NEW
+                      T3294(normal) ghc/alloc           1,604,122,256        NEW
+                      T4801(normal) ghc/alloc             298,882,104        NEW
+                      T5030(normal) ghc/alloc             348,630,544        NEW
+                    T5321FD(normal) ghc/alloc             243,773,616        NEW
+                   T5321Fun(normal) ghc/alloc             271,926,264        NEW
+                      T5631(normal) ghc/alloc             533,197,296        NEW
+                      T5642(normal) ghc/alloc             461,920,096        NEW
+                      T5837(normal) ghc/alloc              35,043,808        NEW
+                      T6048(optasm) ghc/alloc              99,285,728        NEW
+                       T783(normal) ghc/alloc             375,688,024        NEW
+                      T8095(normal) ghc/alloc           3,154,554,248        NEW
+                      T9020(optasm) ghc/alloc             235,939,968        NEW
+                      T9198(normal) ghc/alloc              44,956,096        NEW
+                      T9233(normal) ghc/alloc             715,123,016        NEW
+                      T9630(normal) ghc/alloc           1,464,795,472        NEW
+                      T9675(optasm) ghc/alloc             435,912,720        NEW
+                     T9872a(normal) ghc/alloc           1,673,157,528        NEW
+                     T9872b(normal) ghc/alloc           1,919,598,552        NEW
+               T9872b_defer(normal) ghc/alloc           2,952,688,632        NEW
+                     T9872c(normal) ghc/alloc           1,631,863,696        NEW
+                     T9872d(normal) ghc/alloc             397,873,936        NEW
+                      T9961(normal) ghc/alloc             348,633,064        NEW
+       TcPlugin_RewritePerf(normal) ghc/alloc           2,111,825,368        NEW
+                      WWRec(normal) ghc/alloc             576,823,800        NEW
+             hard_hole_fits(normal) ghc/alloc             452,607,656        NEW
+                     hie002(normal) ghc/alloc           9,037,739,080        NEW
+                 parsing001(normal) ghc/alloc             456,567,224        NEW
+                                                                                
+                          geo. mean                                    +0.0%    
+
+
+Metrics: compile_time/max_bytes_used
+------------------------------------
+
+                                        Baseline                         
+                           Test  Metric    value     New value Change    
+-------------------------------------------------------------------------
+MultiLayerModulesDefsGhci(ghci) ghc/max             77,831,360        NEW
+  MultiLayerModulesNoCode(ghci) ghc/max             44,641,224        NEW
+                 T10370(optasm) ghc/max             23,531,808        NEW
+                 T11545(normal) ghc/max             10,835,320        NEW
+                 T15304(normal) ghc/max             29,889,112        NEW
+                 T15630(normal) ghc/max              8,948,368        NEW
+                T18698a(normal) ghc/max             13,703,096        NEW
+                T18698b(normal) ghc/max             13,791,912        NEW
+                  T1969(normal) ghc/max             19,053,112        NEW
+                 T20261(normal) ghc/max             37,181,968        NEW
+                  T3064(normal) ghc/max             19,015,704        NEW
+                  T3294(normal) ghc/max             32,925,968        NEW
+                  T9630(normal) ghc/max             43,460,920        NEW
+                  T9675(optasm) ghc/max             16,431,464        NEW
+                                                                         
+                      geo. mean                                 +0.0%    
+
+
+Metrics: compile_time/peak_megabytes_allocated
+----------------------------------------------
+
+                                         Baseline                         
+                           Test   Metric    value     New value Change    
+--------------------------------------------------------------------------
+MultiLayerModulesDefsGhci(ghci) ghc/peak                    185        NEW
+  MultiLayerModulesNoCode(ghci) ghc/peak                    118        NEW
+                 T10370(optasm) ghc/peak                     60        NEW
+                 T11545(normal) ghc/peak                     28        NEW
+                 T15304(normal) ghc/peak                     76        NEW
+                 T15630(normal) ghc/peak                     25        NEW
+                T18698a(normal) ghc/peak                     36        NEW
+                T18698b(normal) ghc/peak                     37        NEW
+                  T1969(normal) ghc/peak                     50        NEW
+                 T20261(normal) ghc/peak                     92        NEW
+                  T3064(normal) ghc/peak                     41        NEW
+                  T3294(normal) ghc/peak                     88        NEW
+                  T7702(normal) ghc/peak                     22        NEW
+                  T9630(normal) ghc/peak                    110        NEW
+                  T9675(optasm) ghc/peak                     42        NEW
+                                                                          
+                      geo. mean                                  +0.0%    
+
+
+Metrics: runtime/max_bytes_used
+-------------------------------
+
+                               Baseline                         
+                  Test  Metric    value     New value Change    
+----------------------------------------------------------------
+   MethSharing(normal) run/max                 44,328        NEW
+        T12791(normal) run/max                289,472        NEW
+        T13218(normal) run/max                365,272        NEW
+         T2762(normal) run/max                 35,984        NEW
+         T3474(normal) run/max                 44,328        NEW
+         T3586(normal) run/max                 44,328        NEW
+         T3738(normal) run/max                 44,328        NEW
+           T4029(ghci) run/max             14,811,528        NEW
+         T4334(normal) run/max                 60,680        NEW
+         T5835(normal) run/max                289,472        NEW
+         T7257(normal) run/max            209,871,192        NEW
+         T7436(normal) run/max                 60,152        NEW
+        T7436b(normal) run/max                 44,328        NEW
+         T7850(normal) run/max              1,108,656        NEW
+ lazy-bs-alloc(normal) run/max                 44,792        NEW
+space_leak_001(normal) run/max                463,320        NEW
+                                                                
+             geo. mean                                 +0.0%    
+
+
+Metrics: runtime/peak_megabytes_allocated
+-----------------------------------------
+
+                                Baseline                         
+                  Test   Metric    value     New value Change    
+-----------------------------------------------------------------
+   MethSharing(normal) run/peak                      2        NEW
+        T12791(normal) run/peak                      2        NEW
+        T13218(normal) run/peak                      2        NEW
+         T2762(normal) run/peak                      2        NEW
+         T3586(normal) run/peak                     18        NEW
+         T3738(normal) run/peak                      2        NEW
+           T4029(ghci) run/peak                     37        NEW
+         T4334(normal) run/peak                      2        NEW
+         T5835(normal) run/peak                      2        NEW
+         T7257(normal) run/peak                    214        NEW
+         T7436(normal) run/peak                      2        NEW
+        T7436b(normal) run/peak                      2        NEW
+         T7850(normal) run/peak                      3        NEW
+ lazy-bs-alloc(normal) run/peak                      2        NEW
+space_leak_001(normal) run/peak                      3        NEW
+                                                                 
+             geo. mean                                  +0.0%    
+
+
+
+Missing Baseline Metrics these metrics trivially pass because a baseline (expected value) cannot be recovered from previous git commits. This may be due to HEAD having new tests or having expected changes, the presence of expected changes since the last run of the tests, and/or the latest test run being too old.
+       T5549 T15263 T18282 T5536 join004 T12791 MultiLayerModulesDefsGhci T18923 MethSharing T18574 T6048 T12990 T5949 T3064 hard_hole_fits T15304 TcPlugin_RewritePerf T9872d T13701 T11822 T8763 T4267 CoOpt_Singletons T15426 T18140 join003 T10547 T5321Fun T19347 T17977b T14683 InstanceMatching1 hie002 T14697 T9848 T7257 T7436 MultiComponentModulesRecomp T2762 T9872b_defer T18698a MultiLayerModulesRecomp T5113 InlineArrayAlloc T13191 T16190 T17499 T5237 T4474b T9233 T17516 T4978 lazy-bs-alloc T15185 T11303b T12707 T5321FD MultiLayerModulesTH_Make T16577 T20049 T15578 T4029 T13056 T10678 Conversions T17836b T9872c T9020 T10421a T13253-spj haddock.compiler T12425 PmSeriesS T7954 T9961 T9630 T15226a LargeRecord T16875 T13379 T14955 T15226 T18304 T14052 PmSeriesG T15630 T7850 WWRec MultiLayerModules T4474a T13218 T7702 T16473 T11374 T3586 T3738 MultiComponentModules T4474c T7619 T5205 T10858 T4801 T12545 T12996 InlineByteArrayAlloc T18698b T14936 haddock.base T17977 CoOpt_Read DeriveNull T8766 T12234 T783 T9675 InlineCloneArrayAlloc T14052Type T13719 T4830 T20261 PmSeriesV T5030 PmSeriesT T18223 T18478 T3474 T15703 join007 T5631 T17096 T15164 T8095 space_leak_001 T10421 T3924 MultiLayerModulesTH_OneShot T7797 T17836 T9872b T9203 T12227 T19695 T12150 T5835 T7436b MultiLayerModulesNoCode T13253 T876 T17123 ManyConstructors InstanceMatching haddock.Cabal T13536a T13623 T11545 T9872a T10359 T11195 T13386 T13001 parsing001 ManyAlternatives UniqLoop T9339 T13035 join002 T4334 T3294 T9198 T11276 T8472 T5642 T10370 T1969 T5837
+
+If the tests exist on the previous commit (And are configured to run with the same ways), then check out that commit and run the tests to generate the missing metrics. Alternatively, a baseline may be recovered from ci results once fetched:
+
+       git fetch https://gitlab.haskell.org/ghc/ghc-performance-notes.git refs/notes/perf:refs/notes/ci/perf
+
+SUMMARY for test run started at Fri Dec  8 14:05:13 2023 
+1:22:15.609866 spent to go through
+    9049 total tests, which gave rise to
+   45160 test cases, of which
+   32118 were skipped
+       0 had missing libraries
+
+    9081 expected passes
+     103 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       0 unexpected failures
+       0 unexpected stat failures
+      19 fragile tests
+
+
+Performance Metrics NOT Saved working tree is dirty. Commit changes or use --metrics-file to save metrics to a file.
+Build completed in 1h23m
+
