@@ -74,6 +74,10 @@ import GHC.Types.Name.Ppr
 import Control.Monad
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Unit.Module
+
+-- MY IMPORTS
+import GHC.Core.Opt.PhaseOrder (getPhaseOrder)
+
 {-
 ************************************************************************
 *                                                                      *
@@ -398,6 +402,16 @@ getCoreToDo logger dflags
     flatten_todos (CoreDoPasses passes : rest) =
       flatten_todos passes ++ flatten_todos rest
     flatten_todos (todo : rest) = todo : flatten_todos rest
+
+
+  -- Added RunWhen
+  -- runWhen :: Bool -> CoreToDo -> CoreToDo
+  -- runWhen True  do_this = do_this
+  -- runWhen False _       = CoreDoNothing
+
+  -- runMaybe :: Maybe a -> (a -> CoreToDo) -> CoreToDo
+  -- runMaybe (Just x) f = f x
+  -- runMaybe Nothing  _ = CoreDoNothing
 
 {- Note [Inline in InitialPhase]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
