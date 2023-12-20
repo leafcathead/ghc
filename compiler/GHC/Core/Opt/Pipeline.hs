@@ -75,8 +75,56 @@ import Control.Monad
 import qualified GHC.LanguageExtensions as LangExt
 import GHC.Unit.Module
 
--- MY IMPORTS
-import GHC.Core.Opt.PhaseOrder (getPhaseOrder)
+-- MY MODULES:
+-- import GHC.Core.Opt.PhaseOrder ( getPhaseOrder )
+
+import qualified Data.Map.Strict as Map
+import Data.List (sortBy, map)
+import Data.Ord (comparing)
+import GHC.Core.Opt.Monad
+import Data.String
+import Data.Int
+import Data.Maybe (fromMaybe)
+
+createDictionary :: Map.Map String Int
+createDictionary = Map.fromList []
+
+insertIntoDictionary :: Map.Map String Int -> String -> Int -> Map.Map String Int
+insertIntoDictionary dictionary key value = Map.insert key value dictionary
+
+listToNewList :: [(String, CoreToDo)] -> Map.Map String Int -> [(Int, CoreToDo)]
+listToNewList inputList dictionary = map getValue inputList
+  where
+    getValue :: (String, CoreToDo) -> (Int, CoreToDo)
+    getValue (key, opt) = (fromMaybe 0 (Map.lookup key dictionary), opt)
+
+orderTuples :: [(Int, CoreToDo)] -> [(Int, CoreToDo)]
+orderTuples tuples = sortBy (comparing fst') tuples
+  where
+    fst' :: (Int, CoreToDo) -> Int
+    fst' (x, _) = x
+
+flattenTuples :: [(Int, CoreToDo)] -> [CoreToDo]
+flattenTuples tuples = map flatten tuples
+  where
+    flatten :: (Int, CoreToDo) -> CoreToDo
+    flatten (_, x) = x
+
+getPhaseOrder :: [(String, CoreToDo)] -> [CoreToDo]
+getPhaseOrder coreToDoList = do
+
+    let my_var = 3 -- 0 is the default order
+
+    let my_Dictionary = case my_var of
+                        0 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 1) "specialise" 2) "full_laziness_1" 3) "simpl3" 4) "float_in_1" 5) "call_arity" 6) "strictness" 7) "exitification" 8) "full_laziness_2" 9) "cse" 10) "float_in_2" 11) "final" 12) "rule_check1" 13) "liberate_case" 14) "spec_constr" 15) "rule_check2" 16) "late_specialise" 17) "triple_combo" 18) "late_dmd_anal" 19) "strict_anal" 20) "rule_check3" 21) "add_caller" 22) "add_late" 23)
+                        1 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 1) "specialise" 2) "full_laziness_1" 8) "simpl3" 16) "float_in_1" 3) "call_arity" 9) "strictness" 18) "exitification" 20) "full_laziness_2" 12) "cse" 11) "float_in_2" 4) "final" 5) "rule_check1" 6) "liberate_case" 10) "spec_constr" 14) "rule_check2" 13) "late_specialise" 19) "triple_combo" 15) "late_dmd_anal" 7) "strict_anal" 17) "rule_check3" 22) "add_caller" 23) "add_late" 21)
+                        2 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 16) "specialise" 2) "full_laziness_1" 11) "simpl3" 6) "float_in_1" 13) "call_arity" 4) "strictness" 14) "exitification" 15) "full_laziness_2" 3) "cse" 21) "float_in_2" 1) "final" 20) "rule_check1" 8) "liberate_case" 7) "spec_constr" 12) "rule_check2" 9) "late_specialise" 10) "triple_combo" 19) "late_dmd_anal" 5) "strict_anal" 18) "rule_check3" 17) "add_caller" 22) "add_late" 23)
+                        3 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 5) "specialise" 17) "full_laziness_1" 2) "simpl3" 6) "float_in_1" 1) "call_arity" 16) "strictness" 4) "exitification" 15) "full_laziness_2" 8) "cse" 20) "float_in_2" 11) "final" 14) "rule_check1" 9) "liberate_case" 10) "spec_constr" 18) "rule_check2" 3) "late_specialise" 13) "triple_combo" 12) "late_dmd_anal" 21) "strict_anal" 7) "rule_check3" 22) "add_caller" 23) "add_late" 19)
+                        4 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 18) "presimplify" 9) "specialise" 11) "full_laziness_1" 21) "simpl3" 8) "float_in_1" 4) "call_arity" 3) "strictness" 12) "exitification" 19) "full_laziness_2" 5) "cse" 15) "float_in_2" 7) "final" 10) "rule_check1" 14) "liberate_case" 6) "spec_constr" 1) "rule_check2" 2) "late_specialise" 20) "triple_combo" 16) "late_dmd_anal" 13) "strict_anal" 17) "rule_check3" 22) "add_caller" 23) "add_late" 0)
+
+
+    flattenTuples (orderTuples (listToNewList coreToDoList my_Dictionary))
+
 
 {-
 ************************************************************************
@@ -132,9 +180,7 @@ core2core hsc_env guts@(ModGuts { mg_module  = mod
 
 getCoreToDo :: Logger -> DynFlags -> [CoreToDo]
 getCoreToDo logger dflags
-  =  trace "REALLY OBVIOUS PRINTING MESSAGE HERE!!! THERE IS NO WAY YOU COULD MISS THIS! THIS IS GOOD! :)" $ 
-     trace ("DynFlags - Rule Check: " ++ show (ruleCheck dflags) ++ ", Full Laziness: " ++ show (gopt Opt_FullLaziness dflags))  $
-     flatten_todos core_todo
+  = flatten_todos core_todo
   where
     phases        = simplPhases        dflags
     max_iter      = maxSimplIterations dflags
@@ -235,39 +281,22 @@ getCoreToDo logger dflags
     add_late_ccs =
         runWhen (profiling && gopt Opt_ProfLateInlineCcs dflags) $ CoreAddLateCcs
 
-    core_todo =
+    core_todo = getPhaseOrder
      [
     -- We want to do the static argument transform before full laziness as it
     -- may expose extra opportunities to float things outwards. However, to fix
     -- up the output of the transformation we need at do at least one simplify
     -- after this before anything else
-        runWhen static_args (CoreDoPasses [ simpl_gently, CoreDoStaticArgs ]),
+        ("static_args", runWhen static_args (CoreDoPasses [ simpl_gently, CoreDoStaticArgs ])),
 
         -- initial simplify: mk specialiser happy: minimum effort please
-        runWhen do_presimplify simpl_gently,
+        ("presimplify", runWhen do_presimplify simpl_gently),
 
         -- Specialisation is best done before full laziness
         -- so that overloaded functions have all their dictionary lambdas manifest
-        runWhen do_specialise CoreDoSpecialising,
+        ("specialise", runWhen do_specialise CoreDoSpecialising),
 
-            -- ORIGINAL ORDER:
-              -- full_laziness
-              -- do_simpl3
-              -- Float inwards
-
-            -- MODIFIED ORDER:
-              -- Float inwards
-              -- full_laziness
-              -- dosimpl3
-        
-        runWhen do_float_in CoreDoFloatInwards,
-        -- Run float-inwards immediately before the strictness analyser
-        -- Doing so pushes bindings nearer their use site and hence makes
-        -- them more likely to be strict. These bindings might only show
-        -- up after the inlining from simplification.  Example in fulsom,
-        -- Csg.calc, where an arg of timesDouble thereby becomes strict.
-
-        if full_laziness then
+        ("full_laziness_1", if full_laziness then
            CoreDoFloatOutwards FloatOutSwitches {
                                  floatOutLambdas   = Just 0,
                                  floatOutConstants = True,
@@ -294,13 +323,13 @@ getCoreToDo logger dflags
            -- Even with full laziness turned off, we still need to float static
            -- forms to the top level. See Note [Grand plan for static forms] in
            -- GHC.Iface.Tidy.StaticPtrTable.
-           static_ptrs_float_outwards,
+           static_ptrs_float_outwards),
 
         -- Run the simplier phases 2,1,0 to allow rewrite rules to fire
-        runWhen do_simpl3
+        ("simpl3", runWhen do_simpl3
             (CoreDoPasses $ [ simpl_phase (Phase phase) "main" max_iter
                             | phase <- [phases, phases-1 .. 1] ] ++
-                            [ simpl_phase (Phase 0) "main" (max max_iter 3) ]),
+                            [ simpl_phase (Phase 0) "main" (max max_iter 3) ])),
                 -- Phase 0: allow all Ids to be inlined now
                 -- This gets foldr inlined before strictness analysis
 
@@ -312,26 +341,30 @@ getCoreToDo logger dflags
                 -- ==>  let k = BIG in letrec go = \xs -> ...(BIG x).... in go xs
                 -- Don't stop now!
 
+        ("float_in_1", runWhen do_float_in CoreDoFloatInwards),
+            -- Run float-inwards immediately before the strictness analyser
+            -- Doing so pushes bindings nearer their use site and hence makes
+            -- them more likely to be strict. These bindings might only show
+            -- up after the inlining from simplification.  Example in fulsom,
+            -- Csg.calc, where an arg of timesDouble thereby becomes strict.
 
-        runWhen call_arity $ CoreDoPasses
+        ("call_arity", runWhen call_arity $ CoreDoPasses
             [ CoreDoCallArity
             , simplify "post-call-arity"
-            ],
+            ]),
 
         -- Strictness analysis
-        runWhen strictness demand_analyser,
+        ("strictness", runWhen strictness demand_analyser),
 
-        runWhen exitification CoreDoExitify,
+        ("exitification", runWhen exitification CoreDoExitify),
             -- See Note [Placement of the exitification pass]
 
-
-
-        runWhen full_laziness $
+        ("full_laziness_2", runWhen full_laziness $
            CoreDoFloatOutwards FloatOutSwitches {
                                  floatOutLambdas     = floatLamArgs dflags,
                                  floatOutConstants   = True,
                                  floatOutOverSatApps = True,
-                                 floatToTopLevelOnly = False },
+                                 floatToTopLevelOnly = False }),
                 -- nofib/spectral/hartel/wang doubles in speed if you
                 -- do full laziness late in the day.  It only happens
                 -- after fusion and other stuff, so the early pass doesn't
@@ -339,61 +372,61 @@ getCoreToDo logger dflags
                 --        f_el22 (f_el21 r_midblock)
 
 
-        runWhen cse CoreCSE,
+        ("cse", runWhen cse CoreCSE),
                 -- We want CSE to follow the final full-laziness pass, because it may
                 -- succeed in commoning up things floated out by full laziness.
                 -- CSE used to rely on the no-shadowing invariant, but it doesn't any more
 
-        runWhen do_float_in CoreDoFloatInwards,
+        ("float_in_2", runWhen do_float_in CoreDoFloatInwards),
 
-        simplify "final",  -- Final tidy-up
+        ("final", simplify "final"),  -- Final tidy-up
 
-        maybe_rule_check FinalPhase,
+        ("rule_check1", maybe_rule_check FinalPhase),
 
         --------  After this we have -O2 passes -----------------
         -- None of them run with -O
 
                 -- Case-liberation for -O2.  This should be after
                 -- strictness analysis and the simplification which follows it.
-        runWhen liberate_case $ CoreDoPasses
-           [ CoreLiberateCase, simplify "post-liberate-case" ],
+        ("liberate_case", runWhen liberate_case $ CoreDoPasses
+           [ CoreLiberateCase, simplify "post-liberate-case" ]),
            -- Run the simplifier after LiberateCase to vastly
            -- reduce the possibility of shadowing
            -- Reason: see Note [Shadowing] in GHC.Core.Opt.SpecConstr
 
-        runWhen spec_constr $ CoreDoPasses
-           [ CoreDoSpecConstr, simplify "post-spec-constr"],
+        ("spec_constr", runWhen spec_constr $ CoreDoPasses
+           [ CoreDoSpecConstr, simplify "post-spec-constr"]),
            -- See Note [Simplify after SpecConstr]
 
-        maybe_rule_check FinalPhase,
+        ("rule_check2", maybe_rule_check FinalPhase),
 
-        runWhen late_specialise $ CoreDoPasses
-           [ CoreDoSpecialising, simplify "post-late-spec"],
+        ("late_specialise", runWhen late_specialise $ CoreDoPasses
+           [ CoreDoSpecialising, simplify "post-late-spec"]),
 
         -- LiberateCase can yield new CSE opportunities because it peels
         -- off one layer of a recursive function (concretely, I saw this
         -- in wheel-sieve1), and I'm guessing that SpecConstr can too
         -- And CSE is a very cheap pass. So it seems worth doing here.
-        runWhen ((liberate_case || spec_constr) && cse) $ CoreDoPasses
-           [ CoreCSE, simplify "post-final-cse" ],
+        ("triple_combo", runWhen ((liberate_case || spec_constr) && cse) $ CoreDoPasses
+           [ CoreCSE, simplify "post-final-cse" ]),
 
         ---------  End of -O2 passes --------------
 
-        runWhen late_dmd_anal $ CoreDoPasses (
+        ("late_dmd_anal", runWhen late_dmd_anal $ CoreDoPasses (
             dmd_cpr_ww ++ [simplify "post-late-ww"]
-          ),
+          )),
 
         -- Final run of the demand_analyser, ensures that one-shot thunks are
         -- really really one-shot thunks. Only needed if the demand analyser
         -- has run at all. See Note [Final Demand Analyser run] in GHC.Core.Opt.DmdAnal
         -- It is EXTREMELY IMPORTANT to run this pass, otherwise execution
         -- can become /exponentially/ more expensive. See #11731, #12996.
-        runWhen (strictness || late_dmd_anal) CoreDoDemand,
+        ("strict_anal", runWhen (strictness || late_dmd_anal) CoreDoDemand),
 
-        maybe_rule_check FinalPhase,
+        ("rule_check3", maybe_rule_check FinalPhase),
 
-        add_caller_ccs,
-        add_late_ccs
+        ("add_caller", add_caller_ccs),
+        ("add_late", add_late_ccs)
      ]
 
     -- Remove 'CoreDoNothing' and flatten 'CoreDoPasses' for clarity.
@@ -402,16 +435,6 @@ getCoreToDo logger dflags
     flatten_todos (CoreDoPasses passes : rest) =
       flatten_todos passes ++ flatten_todos rest
     flatten_todos (todo : rest) = todo : flatten_todos rest
-
-
-  -- Added RunWhen
-  -- runWhen :: Bool -> CoreToDo -> CoreToDo
-  -- runWhen True  do_this = do_this
-  -- runWhen False _       = CoreDoNothing
-
-  -- runMaybe :: Maybe a -> (a -> CoreToDo) -> CoreToDo
-  -- runMaybe (Just x) f = f x
-  -- runMaybe Nothing  _ = CoreDoNothing
 
 {- Note [Inline in InitialPhase]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -516,28 +539,28 @@ doCorePass pass guts = do
 
   case pass of
     CoreDoSimplify {}         -> {-# SCC "Simplify" #-}
-                                 trace ("CoreDoSimplify") $ simplifyPgm pass guts
+                                 simplifyPgm pass guts
 
     CoreCSE                   -> {-# SCC "CommonSubExpr" #-}
-                                  trace ("CoreCoreCSE") $ updateBinds cseProgram
+                                 updateBinds cseProgram
 
     CoreLiberateCase          -> {-# SCC "LiberateCase" #-}
-                                  trace ("CoreDoLiberateCase") $ updateBinds (liberateCase dflags)
+                                 updateBinds (liberateCase dflags)
 
     CoreDoFloatInwards        -> {-# SCC "FloatInwards" #-}
-                                  trace ("CoreDoFloatInwards") $ updateBinds (floatInwards platform)
+                                 updateBinds (floatInwards platform)
 
     CoreDoFloatOutwards f     -> {-# SCC "FloatOutwards" #-}
-                                  trace ("CoreDoFloatOutwards") $ updateBindsM (liftIO . floatOutwards logger f us)
+                                 updateBindsM (liftIO . floatOutwards logger f us)
 
     CoreDoStaticArgs          -> {-# SCC "StaticArgs" #-}
-                                  trace ("CoreDoStaticArgs") $ updateBinds (doStaticArgs us)
+                                 updateBinds (doStaticArgs us)
 
     CoreDoCallArity           -> {-# SCC "CallArity" #-}
-                                 trace ("CoreDoCallArity") $ updateBinds callArityAnalProgram
+                                 updateBinds callArityAnalProgram
 
     CoreDoExitify             -> {-# SCC "Exitify" #-}
-                                 trace ("DoExitify") $ updateBinds exitifyProgram
+                                 updateBinds exitifyProgram
 
     CoreDoDemand              -> {-# SCC "DmdAnal" #-}
                                  updateBindsM (liftIO . dmdAnal logger dflags fam_envs (mg_rules guts))
@@ -555,7 +578,7 @@ doCorePass pass guts = do
                                  specConstrProgram guts
 
     CoreAddCallerCcs          -> {-# SCC "AddCallerCcs" #-}
-                                 trace ("AddCallerCcs") $ addCallerCostCentres guts
+                                 addCallerCostCentres guts
 
     CoreAddLateCcs            -> {-# SCC "AddLateCcs" #-}
                                  addLateCostCentresMG guts
