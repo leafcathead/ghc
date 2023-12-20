@@ -1,0 +1,54 @@
+
+Unexpected results from:
+TEST="Arity00 Arity01 Arity02 Arity03 Arity04 Arity05 Arity06 Arity07 Arity08 Arity09 Arity10 Arity11 Arity13 Arity14 Arity15 Arity16 CaseBinderCPR RecDataConCPR T16040 T18109 T18174 T18401 T18793 T19398 T1959 T19822 T2387 debug dynamicToo001 inline-check"
+
+[1m[31mSUMMARY[0m for test run started at Wed Dec 20 09:33:26 2023 
+0:23:55.926183 spent to go through
+    9822 total tests, which gave rise to
+   47960 test cases, of which
+   37957 were skipped
+       0 had missing libraries
+
+    1905 expected passes
+      23 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+      30 unexpected failures
+       0 unexpected stat failures
+       5 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity00.run               Arity00 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity01.run               Arity01 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity02.run               Arity02 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity03.run               Arity03 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity04.run               Arity04 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity05.run               Arity05 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity06.run               Arity06 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity07.run               Arity07 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity08.run               Arity08 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity09.run               Arity09 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity10.run               Arity10 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity11.run               Arity11 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity13.run               Arity13 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity14.run               Arity14 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity15.run               Arity15 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/Arity16.run               Arity16 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/CaseBinderCPR.run                     CaseBinderCPR [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/codeGen/should_compile/debug.run                   debug [bad stdout] (normal)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/driver/dynamicToo/dynamicToo001/dynamicToo001.run  dynamicToo001 [bad stderr] (normal)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/driver/inline-check.run                            inline-check [stderr mismatch] (normal)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/RecDataConCPR.run                     RecDataConCPR [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/T16040.run                            T16040 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/should_compile/T18109.run                  T18109 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/should_compile/T18174.run                  T18174 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/should_compile/T18401.run                  T18401 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/arityanal/should_compile/T18793.run                T18793 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/T19398.run                            T19398 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/driver/T1959/T1959.run                             T1959 [bad stdout] (normal)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/T19822.run                            T19822 [stderr mismatch] (optasm)
+   /tmp/ghctest-rrvie9zn/test   spaces/testsuite/tests/cpranal/sigs/T2387.run                             T2387 [stderr mismatch] (optasm)
+
+WARNING: Testsuite run was terminated early
