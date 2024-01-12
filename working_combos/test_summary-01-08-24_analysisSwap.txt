@@ -1,0 +1,20 @@
+
+[1m[32mSUMMARY[0m for test run started at Mon Jan  8 11:09:58 2024 
+1:31:47.918852 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9882 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       0 unexpected failures
+       0 unexpected stat failures
+      29 fragile tests
+
+
+Swapped "add_caller" and "add_late"

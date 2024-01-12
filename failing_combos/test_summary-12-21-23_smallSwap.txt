@@ -1,0 +1,33 @@
+
+Unexpected results from:
+TEST="LinearLetRec T13056 T20598"
+
+[1m[31mSUMMARY[0m for test run started at Thu Dec 21 13:28:20 2023 
+2:08:08.078120 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9880 expected passes
+     105 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       1 unexpected passes
+       1 unexpected failures
+       1 unexpected stat failures
+      29 fragile tests
+
+Unexpected passes:
+   /tmp/ghctest-5bcyi7lg/test   spaces/testsuite/tests/linear/should_compile/LinearLetRec.run  LinearLetRec [unexpected] (normal)
+
+Unexpected failures:
+   /tmp/ghctest-5bcyi7lg/test   spaces/testsuite/tests/cpranal/should_run/T20598.run  T20598 [bad exit code (139)] (optasm)
+
+Unexpected stat failures:
+   /tmp/ghctest-5bcyi7lg/test   spaces/testsuite/tests/perf/compiler/T13056.run  T13056 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+
+
+
+NOTE: This results were achieved after swapping "float_in_1" and "call_arity"

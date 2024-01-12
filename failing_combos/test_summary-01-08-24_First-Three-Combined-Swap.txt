@@ -1,0 +1,68 @@
+
+Unexpected results from:
+TEST="DeriveNull LargeRecord T10370 T11272 T12150 T12227 T12600 T13056 T13253 T13873 T15056 T15445 T15547 T15703 T17409 T17966 T18013 T18174 T18223 T18231 T18668 T18894 T19695 T19790 T19892 T21286 T21839c T21888 T21917 T23907 T2486 T4007 T5298 T6056 T7785 T7837 T9020 T9509 T9961 spec004"
+
+[1m[31mSUMMARY[0m for test run started at Mon Jan  8 22:17:25 2024 
+1:32:35.880584 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9842 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+      27 unexpected failures
+      13 unexpected stat failures
+      29 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/spec004.run    spec004 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T11272.run     T11272 [bad exit code (2)] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T12600.run     T12600 [bad stdout] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T13873.run     T13873 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T15056.run     T15056 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T15445.run     T15445 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/numeric/should_compile/T15547.run       T15547 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T17409.run     T17409 [bad stdout] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T17966.run     T17966 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T18013.run     T18013 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/cpranal/should_compile/T18174.run       T18174 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T18231.run     T18231 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T18668.run     T18668 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/stranal/should_compile/T18894.run       T18894 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T19790.run     T19790 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/numeric/should_compile/T19892.run       T19892 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T21286.run     T21286 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/stranal/sigs/T21888.run                 T21888 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T21917.run     T21917 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/numeric/should_compile/T23907.run       T23907 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_run/T2486.run          T2486 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T4007.run                 T4007 [bad stdout] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T5298.run      T5298 [bad stdout] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T6056.run      T6056 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T7785.run      T7785 [stderr mismatch] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/indexed-types/should_compile/T7837.run  T7837 [stderr mismatch] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/simplCore/should_compile/T9509.run      T9509 [bad exit code (2)] (normal)
+
+Unexpected stat failures:
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/should_run/DeriveNull.run  DeriveNull [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/LargeRecord.run   LargeRecord [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T10370.run        T10370 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T12150.run        T12150 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T12227.run        T12227 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T13056.run        T13056 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T13253.run        T13253 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T15703.run        T15703 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T18223.run        T18223 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T19695.run        T19695 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T21839c.run       T21839c [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T9020.run         T9020 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-2i2stgul/test   spaces/testsuite/tests/perf/compiler/T9961.run         T9961 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+
+
+
+NOTE: O2Anal + Reverse First Three

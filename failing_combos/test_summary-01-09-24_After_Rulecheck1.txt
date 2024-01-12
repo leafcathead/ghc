@@ -1,0 +1,122 @@
+
+Unexpected results from:
+TEST="AmapCoerce Arity01 Arity02 Arity03 Arity04 Arity05 Arity06 Arity07 Arity08 Arity09 Arity10 Arity11 Arity14 Arity15 Arity16 BottomFromInnerLambda DataToTagFamilyScrut LargeRecord T10421 T10694 T11068 T11272 T12234 T13156 T13157 T13331 T13367 T14152 T14955 T15056 T15205 T15226b T15631 T15703 T16038 T16197b T16577 T16859 T17366 T17516 T17673 T17901 T18013 T18231 T18328 T18698a T18698b T18793 T18894b T18907 T19581 T1959 T19641 T19717 T19890 T20103 T20203 T20817 T21081 T2110 T21119 T21286 T21839c T21851 T21851_2 T21888a T21917 T21948 T22097 T22241 T22375 T22375DataFamily T22428 T22611 T23398 T3717 T3772 T4201 T4918 T4930 T5075 T5298 T5366 T7360 T8274 T9291 T9509 T9630 T9675 T9961 dynamicToo001 inline-check noinline01 simplCore-oneShot"
+
+[1m[31mSUMMARY[0m for test run started at Tue Jan  9 14:36:30 2024 
+1:34:04.403490 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9788 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+      81 unexpected failures
+      13 unexpected stat failures
+      29 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_run/AmapCoerce.run                AmapCoerce [bad stdout] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity01.run               Arity01 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity02.run               Arity02 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity03.run               Arity03 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity04.run               Arity04 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity05.run               Arity05 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity06.run               Arity06 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity07.run               Arity07 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity08.run               Arity08 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity09.run               Arity09 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity10.run               Arity10 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity11.run               Arity11 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity14.run               Arity14 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity15.run               Arity15 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/Arity16.run               Arity16 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/BottomFromInnerLambda.run             BottomFromInnerLambda [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/DataToTagFamilyScrut.run  DataToTagFamilyScrut [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/driver/dynamicToo/dynamicToo001/dynamicToo001.run  dynamicToo001 [bad stderr] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/driver/inline-check.run                            inline-check [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/noinline01.run            noinline01 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/prog003/simplCore-oneShot.run            simplCore-oneShot [bad stderr] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/should_compile/T10694.run                  T10694 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T11068.run                           T11068 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T11272.run                T11272 [bad exit code (2)] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T13156.run                T13156 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T13157.run                T13157 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T13331.run                            T13331 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T13367.run                T13367 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T14152.run                T14152 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T15056.run                T15056 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T15205.run                T15205 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplStg/should_compile/T15226b.run                T15226b [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T15631.run                T15631 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T16038/T16038.run         T16038 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T16197b.run                           T16197b [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T16859.run                            T16859 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T17366.run                T17366 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T17673.run                T17673 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T17901.run                T17901 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T18013.run                T18013 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T18231.run                T18231 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T18328.run                T18328 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/arityanal/should_compile/T18793.run                T18793 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/should_compile/T18894b.run                 T18894b [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T18907.run                            T18907 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T19581.run                T19581 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/driver/T1959/T1959.run                             T1959 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/numeric/should_compile/T19641.run                  T19641 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplStg/should_compile/T19717.run                 T19717 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T19890.run                T19890 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T20103.run                T20103 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_run/T20203.run                    T20203 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/should_compile/T20817.run                  T20817 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T21081.run                            T21081 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_run/T2110.run                     T2110 [bad stdout] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T21119.run                            T21119 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T21286.run                T21286 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T21851.run                T21851 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T21851_2.run              T21851_2 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T21888a.run                           T21888a [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T21917.run                T21917 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T21948.run                T21948 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T22097.run                T22097 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T22241.run                            T22241 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T22375.run                T22375 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T22375DataFamily.run      T22375DataFamily [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T22428.run                T22428 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T22611.run                T22611 [stderr mismatch] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/should_compile/T23398.run                  T23398 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T3717.run                 T3717 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T3772.run                 T3772 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T4201.run                 T4201 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T4918.run                 T4918 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T4930.run                 T4930 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/stranal/sigs/T5075.run                             T5075 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T5298.run                 T5298 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T5366.run                 T5366 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T7360.run                 T7360 [stderr mismatch] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T8274.run                 T8274 [bad stdout] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplStg/should_run/T9291.run                      T9291 [bad stdout] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/simplCore/should_compile/T9509.run                 T9509 [bad exit code (2)] (normal)
+
+Unexpected stat failures:
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/LargeRecord.run     LargeRecord [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T10421.run          T10421 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T12234.run          T12234 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/should_run/T14955.run        T14955 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T15703.run          T15703 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T16577.run          T16577 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T17516.run          T17516 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T18698/T18698a.run  T18698a [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T18698/T18698b.run  T18698b [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T21839c.run         T21839c [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T9630.run           T9630 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T9675.run           T9675 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (optasm)
+   /tmp/ghctest-r91zksn0/test   spaces/testsuite/tests/perf/compiler/T9961.run           T9961 [stat [1m[32mdecreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+
+
+
+NOTE: Move last items before Rulecheck 1 after Rulecheck1
