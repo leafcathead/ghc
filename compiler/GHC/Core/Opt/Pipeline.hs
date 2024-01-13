@@ -101,7 +101,7 @@ flattenTuples tuples = map flatten tuples
 getPhaseOrder :: [(String, CoreToDo)] -> [CoreToDo]
 getPhaseOrder coreToDoList =  do
 
-    let my_var = 9 -- 0 is the default order
+    let my_var = 0 -- 0 is the default order
 
     let my_Dictionary = case my_var of
                         0 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 1) "specialise" 2) "full_laziness_1" 3) "simpl3" 4) "float_in_1" 5) "call_arity" 6) "strictness" 7) "exitification" 8) "full_laziness_2" 9) "cse" 10) "float_in_2" 11) "final" 12) "rule_check1" 13) "liberate_case" 14) "spec_constr" 15) "rule_check2" 16) "late_specialise" 17) "triple_combo" 18) "late_dmd_anal" 19) "strict_anal" 20) "rule_check3" 21) "add_caller" 22) "add_late" 23) -- Default
@@ -125,10 +125,10 @@ getPhaseOrder coreToDoList =  do
 ************************************************************************
 -}
 
-core2core :: HscEnv -> ModGuts -> IO ModGuts
+core2core :: HscEnv -> ModGuts -> [Char] -> IO ModGuts
 core2core hsc_env guts@(ModGuts { mg_module  = mod
                                 , mg_loc     = loc
-                                , mg_rdr_env = rdr_env })
+                                , mg_rdr_env = rdr_env }) fString
   = do { let builtin_passes = getCoreToDo dflags hpt_rule_base extra_vars
              uniq_tag = 's'
 

@@ -1,0 +1,24 @@
+
+Unexpected results from:
+TEST="whitespace"
+
+[1m[31mSUMMARY[0m for test run started at Fri Jan 12 19:51:31 2024 
+1:36:34.145259 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9881 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       1 unexpected failures
+       0 unexpected stat failures
+      29 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-l5lkkgz9/test   spaces/testsuite/tests/linters/whitespace.run  whitespace [bad exit code (2)] (normal)
+

@@ -299,6 +299,12 @@ import GHC.Types.Unique.DFM
 import GHC.Cmm.Config (CmmConfig)
 
 
+-- My IMPORTS here
+import Debug.Trace
+import System.FilePath ((</>))
+import System.Directory (getCurrentDirectory, getHomeDirectory)
+
+
 {- **********************************************************************
 %*                                                                      *
                 Initialisation
@@ -1722,6 +1728,12 @@ hscGetSafeMode tcg_env = do
 -- Simplifiers
 --------------------------------------------------------------
 
+getTopDirectory :: FilePath -> [FilePath]
+getTopDirectory currentDir = do
+  let topDir = takeWhile (/='/') currentDir  -- Assuming Unix-like path separator '/'
+  return topDir
+
+
 -- | Run Core2Core simplifier. The list of String is a list of (Core) plugin
 -- module names added via TH (cf 'addCorePlugin').
 hscSimplify :: HscEnv -> [String] -> ModGuts -> IO ModGuts
@@ -1738,9 +1750,15 @@ hscSimplify' plugins ds_result = do
         else liftIO $ initializePlugins
                     $ hscUpdateFlags (\dflags -> foldr addPluginModuleName dflags plugins)
                       hsc_env
+    -- READ EXTERNAL FILE HERE!
+    abs_path <- liftIO $ getHomeDirectory
+    -- liftIO $ putStrLn ("Value of abs_path 1: " ++ abs_path)
+    let file_path = abs_path ++ "/test.txt"
+    -- liftIO $ putStrLn ("Value of abs_path 2: " ++ file_path)
+    f <- liftIO $ readFile file_path
+    -- liftIO $ putStrLn ("Value of f: " ++ f)
     {-# SCC "Core2Core" #-}
-      liftIO $ core2core hsc_env_with_plugins ds_result
-
+      liftIO $ core2core hsc_env_with_plugins ds_result f-- This right here is what calls Core2Core ! This is our Golden Goose!
 --------------------------------------------------------------
 -- Interface generators
 --------------------------------------------------------------
@@ -2280,7 +2298,7 @@ hscDeclsWithLocation hsc_env str source linenumber = do
         hscParseThingWithLocation source linenumber parseModule str
     hscParsedDecls hsc_env decls
 
-hscParsedDecls :: HscEnv -> [LHsDecl GhcPs] -> IO ([TyThing], InteractiveContext)
+hscParsedDecls :: HscEnv -> [LHsDecl GhcPs] -> IO ([TyThing], InteractiveContext) -- IO Monad is here. Can I do stuff here?
 hscParsedDecls hsc_env decls = runInteractiveHsc hsc_env $ do
     hsc_env <- getHscEnv
     let interp = hscInterp hsc_env
