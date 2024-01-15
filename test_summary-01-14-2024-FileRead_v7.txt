@@ -1,0 +1,58 @@
+
+Unexpected results from:
+TEST="ArrowLet1 ArrowLet2 ArrowLet3 T12490 T13242 T14129 T17835 T18870 T18937 T19374a T20540 T22483 ado004 ado006 ado007 ado008 ado009 ado010 ann01 annfail04 annfail05 annfail06 annth_compunits annth_make arrowapply1 arrowapply2 arrowapply3 arrowapply5 arrowcase1 arrowdo1 arrowdo2 arrowform1 arrowif1 arrowlet1 arrowrec1"
+
+[1m[31mSUMMARY[0m for test run started at Sun Jan 14 16:12:14 2024 
+0:00:30.017393 spent to go through
+     115 total tests, which gave rise to
+     556 test cases, of which
+     456 were skipped
+       0 had missing libraries
+
+      60 expected passes
+       1 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+      35 unexpected failures
+       0 unexpected stat failures
+       0 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado004.run                                     ado004 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado006.run                                     ado006 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado007.run                                     ado007 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado008.run                                     ado008 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado009.run                                     ado009 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/ado010.run                                     ado010 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_compile/ann01.run               ann01 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_fail/annfail04.run              annfail04 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_fail/annfail05.run              annfail05 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_fail/annfail06.run              annfail06 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_compile/th/annth_compunits.run  annth_compunits [bad stderr] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_compile/th/annth_make.run       annth_make [bad stderr] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowapply1.run              arrowapply1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowapply2.run              arrowapply2 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowapply3.run              arrowapply3 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowapply5.run              arrowapply5 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowcase1.run               arrowcase1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowdo1.run                 arrowdo1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowdo2.run                 arrowdo2 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowform1.run               arrowform1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowif1.run                 arrowif1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/gadt/ArrowLet1.run                          ArrowLet1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowlet1.run                arrowlet1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/gadt/ArrowLet2.run                          ArrowLet2 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/gadt/ArrowLet3.run                          ArrowLet3 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arrows/should_compile/arrowrec1.run                arrowrec1 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/T12490.run                                     T12490 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/T13242.run                                     T13242 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_compile/T14129.run              T14129 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/T17835.run                                     T17835 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arityanal/should_compile/T18870.run                T18870 [stderr mismatch] (optasm)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/arityanal/should_compile/T18937.run                T18937 [stderr mismatch] (optasm)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/annotations/should_compile/T19374a.run             T19374a [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/T20540.run                                     T20540 [stderr mismatch] (normal)
+   /tmp/ghctest-oqs6ufxv/test   spaces/testsuite/tests/ado/T22483.run                                     T22483 [stderr mismatch] (normal)
+

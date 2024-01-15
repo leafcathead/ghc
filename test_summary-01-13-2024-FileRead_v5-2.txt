@@ -1,0 +1,26 @@
+
+Unexpected results from:
+TEST="MultiLayerModules T13701 T14697"
+
+[1m[31mSUMMARY[0m for test run started at Sat Jan 13 20:15:42 2024 
+1:33:48.577575 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9879 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       0 unexpected failures
+       3 unexpected stat failures
+      29 fragile tests
+
+Unexpected stat failures:
+   /tmp/ghctest-2vs77fcb/test   spaces/testsuite/tests/perf/compiler/MultiLayerModules.run  MultiLayerModules [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2vs77fcb/test   spaces/testsuite/tests/perf/compiler/T13701.run             T13701 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+   /tmp/ghctest-2vs77fcb/test   spaces/testsuite/tests/perf/compiler/T14697.run             T14697 [stat [1m[31mincreased[0m from local baseline @ bd8acc0c6a90971f9d70eda9bc7204470bfb49f7] (normal)
+
