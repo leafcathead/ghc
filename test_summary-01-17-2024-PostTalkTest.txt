@@ -1,0 +1,24 @@
+
+Unexpected results from:
+TEST="T18401"
+
+[1m[31mSUMMARY[0m for test run started at Wed Jan 17 19:21:34 2024 
+1:32:34.254290 spent to go through
+    9836 total tests, which gave rise to
+   48054 test cases, of which
+   38037 were skipped
+       0 had missing libraries
+
+    9881 expected passes
+     106 expected failures
+
+       0 caused framework failures
+       0 caused framework warnings
+       0 unexpected passes
+       1 unexpected failures
+       0 unexpected stat failures
+      29 fragile tests
+
+Unexpected failures:
+   /tmp/ghctest-c5updhah/test   spaces/testsuite/tests/cpranal/should_compile/T18401.run  T18401 [stderr mismatch] (optasm)
+

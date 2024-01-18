@@ -1753,7 +1753,7 @@ hscSimplify' plugins ds_result = do
     -- READ EXTERNAL FILE HERE!
     abs_path <- liftIO $ getHomeDirectory
     -- liftIO $ putStrLn ("Value of abs_path 1: " ++ abs_path)
-    let file_path = abs_path ++ "/test.txt"
+    let file_path = abs_path ++ "/phase.txt"
     -- liftIO $ putStrLn ("Value of abs_path 2: " ++ file_path)
     f <- liftIO $ readFile file_path
     -- liftIO $ putStrLn ("Value of f: " ++ f)
