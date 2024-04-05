@@ -244,6 +244,7 @@ data GeneralFlag
    | Opt_PrintTypecheckerElaboration
 
    -- optimisation opts
+   | Opt_PhaseOrder -- Changes the Phase Order (MY FLAG)
    | Opt_CallArity
    | Opt_Exitification
    | Opt_Strictness
@@ -490,6 +491,7 @@ data GeneralFlag
 
    | Opt_G_NoStateHack
    | Opt_G_NoOptCoercion
+
    deriving (Eq, Show, Enum)
 
 -- | The set of flags which affect optimisation for the purposes of

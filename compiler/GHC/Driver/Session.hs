@@ -2401,6 +2401,8 @@ fFlagsDeps = [
   flagSpec "keep-going"                       Opt_KeepGoing,
   flagSpec "late-dmd-anal"                    Opt_LateDmdAnal,
   flagSpec "late-specialise"                  Opt_LateSpecialise,
+  -- My flag
+  flagSpec "custom-phase"                     Opt_PhaseOrder,
   flagSpec "liberate-case"                    Opt_LiberateCase,
   flagHiddenSpec "llvm-tbaa"                  Opt_LlvmTBAA,
   flagHiddenSpec "llvm-fill-undef-with-garbage" Opt_LlvmFillUndefWithGarbage,

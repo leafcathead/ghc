@@ -125,8 +125,6 @@ getPhaseOrder fString coreToDoList
     decodedString = map read (splitBy '|' fString) :: [Int]
     parsedTuples = parseTupleArray coreToDoList
     my_dictionary = fString2Dictionary decodedString parsedTuples createDictionary
-    -- my_dictionary = case my_var of
-    --                     0 -> (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary (insertIntoDictionary createDictionary "static_args" 0) "presimplify" 1) "specialise" 2) "full_laziness_1" 3) "simpl3" 4) "float_in_1" 5) "call_arity" 6) "strictness" 7) "exitification" 8) "full_laziness_2" 9) "cse" 10) "float_in_2" 11) "final" 12) "rule_check1" 13) "liberate_case" 14) "spec_constr" 15) "rule_check2" 16) "late_specialise" 17) "triple_combo" 18) "late_dmd_anal" 19) "strict_anal" 20) "rule_check3" 21) "add_caller" 22) "add_late" 23) -- Default
     debug_2 = traceShow my_dictionary "DICTIONARY: "
     -- flattenTuples coreToDoList
 
@@ -365,12 +363,21 @@ getCoreToDo dflags hpt_rule_base extra_vars fString
         ("final", simplify "final"),  -- Final tidy-up
 
         ("rule_check1", maybe_rule_check FinalPhase),
-
         --------  After this we have -O2 passes -----------------
         -- None of them run with -O
 
                 -- Case-liberation for -O2.  This should be after
                 -- strictness analysis and the simplification which follows it.
+        --- ADD MY FAKE Optimizations here
+        -- ("my_good_optimization", CoreDoNothing),
+        -- ("my_good_optimization_2", CoreDoNothing),
+        -- ("my_good_optimization_3", CoreDoNothing),
+        -- ("my_good_optimization_4", CoreDoNothing),
+        -- ("my_good_optimization_5", CoreDoNothing),
+        -- ("my_good_optimization_6", CoreDoNothing),
+        -- ("my_netural_optimization", CoreDoNothing),
+        -- ("my_bad_optimization", CoreDoNothing),
+        --- End of fake optimizations
         ("liberate_case", runWhen liberate_case $ CoreDoPasses
            [ CoreLiberateCase, simplify "post-liberate-case" ]),
            -- Run the simplifier after LiberateCase to vastly
